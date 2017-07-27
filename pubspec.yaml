@@ -1,0 +1,9 @@
+name: llvm_compiler
+dependencies:
+  analyzer: ^0.30.0
+  args: ^0.13.4
+  llvm:
+    path: ../llvm
+  symbol_table: ^1.0.0
+executables:
+  dart2llvm: main
