@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="a_first_function.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" singleton="true" nameIsGenerated="true">
+    <option name="filePath" value="$PROJECT_DIR$/../llvm/example/a_first_function.dart" />
+    <option name="workingDirectory" value="$PROJECT_DIR$/../llvm" />
+    <method />
+  </configuration>
+</component>
