@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="compile:hello (--emit-llvm)" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" folderName="compile" singleton="true">
+    <option name="arguments" value="-o example/hello.ll --emit-llvm example/hello.dart --verbose --no-optimize" />
+    <option name="filePath" value="$PROJECT_DIR$/bin/main.dart" />
+    <option name="workingDirectory" value="$PROJECT_DIR$" />
+    <method />
+  </configuration>
+</component>

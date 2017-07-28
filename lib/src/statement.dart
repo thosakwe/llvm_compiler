@@ -11,7 +11,10 @@ abstract class StatementCompiler {
       compileVariableDeclaration(statement, block, ctx);
     else if (statement is ReturnStatement)
       compileReturn(statement, block, ctx);
-    else
+    else if (statement is ExpressionStatement) {
+      block.addStatement(ExpressionCompiler.compileExpression(
+          statement.expression, block, ctx));
+    } else
       throw new UnsupportedError(
           'Cannot compile ${statement.runtimeType}: "${statement.toSource()}".');
   }
@@ -27,7 +30,8 @@ abstract class StatementCompiler {
         block.addStatement(variable.assign(ExpressionCompiler.compileExpression(
             varDecl.initializer, block, ctx)));
         ctx.scope.add(varDecl.name.name,
-            value: new DartObjectImpl(varDecl.initializer.bestType));
+            value:
+                new HybridObject(varDecl.initializer.bestType, variable.type));
       }
     }
   }

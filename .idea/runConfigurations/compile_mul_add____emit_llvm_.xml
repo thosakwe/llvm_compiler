@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="compile:mul_add (--emit-llvm)" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" singleton="true">
+  <configuration default="false" name="compile:mul_add (--emit-llvm)" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" folderName="compile" singleton="true">
     <option name="arguments" value="-o example/mul_add.ll example/mul_add.dart --emit-llvm" />
     <option name="filePath" value="$PROJECT_DIR$/bin/main.dart" />
     <option name="workingDirectory" value="$PROJECT_DIR$" />

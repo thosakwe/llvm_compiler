@@ -17,6 +17,11 @@
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
     </content>
+    <content url="file://$MODULE_DIR$/../llvm_compiler_meta">
+      <excludeFolder url="file://$MODULE_DIR$/../llvm_compiler_meta/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/../llvm_compiler_meta/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../llvm_compiler_meta/packages" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Dart SDK" level="project" />

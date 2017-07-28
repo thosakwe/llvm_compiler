@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="compile:mul_add" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" singleton="true">
+  <configuration default="false" name="compile:mul_add" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" folderName="compile" singleton="true">
     <option name="arguments" value="-o example/mul_add.asm example/mul_add.dart" />
     <option name="filePath" value="$PROJECT_DIR$/bin/main.dart" />
     <option name="workingDirectory" value="$PROJECT_DIR$" />

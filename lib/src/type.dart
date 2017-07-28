@@ -4,9 +4,25 @@ import 'context.dart';
 
 abstract class TypeCompiler {
   static LlvmType compileType(DartType type, CompilerContext ctx) {
-    if (type.isSubtypeOf(ctx.typeProvider.intType))
+    if (type.isAssignableTo(ctx.typeProvider.listType) ||
+        (type is InterfaceType && type.name == 'List')) {
+      if (type is! InterfaceType ||
+          (type is InterfaceType && type.typeArguments.isEmpty))
+        throw new UnsupportedError(
+            'Lists can only be compiled if they hold a type argument.');
+      else {
+        var innerType = (type as InterfaceType).typeArguments.first;
+        return compileType(innerType, ctx).pointer();
+      }
+    } else if (type.isSubtypeOf(ctx.typeProvider.intType))
       return LlvmType.i32;
-
-    throw new UnsupportedError('Cannot compile type "${type.name}" yet.');
+    else if (type.isSubtypeOf(ctx.typeProvider.doubleType))
+      return LlvmType.double;
+    else if (type.isSubtypeOf(ctx.typeProvider.boolType))
+      return LlvmType.i1;
+    else if (type.isSubtypeOf(ctx.typeProvider.stringType))
+      return LlvmType.i8.pointer();
+    else
+      throw new UnsupportedError('Cannot compile type "${type.name}" yet.');
   }
 }

@@ -4,6 +4,9 @@ dependencies:
   args: ^0.13.4
   llvm:
     path: ../llvm
+  llvm_compiler_meta:
+    path: ../llvm_compiler_meta
+  source_gen: ^0.7.0
   symbol_table: ^1.0.0
 executables:
   dart2llvm: main
