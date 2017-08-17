@@ -22,6 +22,8 @@ abstract class TypeCompiler {
       return LlvmType.i1;
     else if (type.isSubtypeOf(ctx.typeProvider.stringType))
       return LlvmType.i8.pointer();
+    else if (type.name == 'void')
+      return LlvmType.$void;
     else
       throw new UnsupportedError('Cannot compile type "${type.name}" yet.');
   }

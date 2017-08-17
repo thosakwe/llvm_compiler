@@ -55,6 +55,10 @@ class LlvmCompiler {
       fn.blocks.add(compileFunctionExpression(fnExpr, ctx));
     }
 
+    for (var block in fn.blocks) {
+      block.addStatement(LlvmStatement.returnVoid);
+    }
+
     ctx.popScope();
     return fn;
   }
