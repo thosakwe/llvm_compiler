@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../bonobo_dart">
+      <excludeFolder url="file://$MODULE_DIR$/../bonobo_dart/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/../bonobo_dart/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../bonobo_dart/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/../bonobo_dart/test/packages" />
+    </content>
     <content url="file://$MODULE_DIR$/../llvm">
       <excludeFolder url="file://$MODULE_DIR$/../llvm/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/../llvm/build" />
